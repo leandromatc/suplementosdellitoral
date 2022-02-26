@@ -1,0 +1,141 @@
+    /* Variables */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    //  Fuente
+    $font: "Poppins",
+    sans-serif;
+    // Colores
+    $darkblue: #172449;
+    $blue: #4765E6;
+    $orange: #E68453;
+    $grey: #e6e6e6;
+    $darkgrey: #919191;
+    $white: #fff;
+    $verde: #58E655;
+    // Margenes
+    $margintop: 10px;
+    $marginbot: 20px;
+    $marginauto: 0px auto;
+    // MIXINS 
+    @mixin titulos {
+        margin-top: $margintop;
+        color: $darkblue;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    
+    @mixin products__card {
+        background: linear-gradient(to bottom, $grey, $white);
+        border: 1px solid $grey;
+        box-shadow: 0 10px 25px rgb(0, 0, 0, 0.08);
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    @mixin product__img {
+        width: 350px;
+        padding: 20px;
+    }
+    
+    @mixin product__name {
+        color: $darkblue;
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+    
+    @mixin product__status {
+        color: $white;
+        font-size: .6em;
+    }
+    
+    @mixin stock {
+        display: inline-block;
+        padding: 3px 10px;
+        background-color: $verde;
+        border-radius: 40px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    }
+    
+    @mixin prox {
+        @extend .enstock;
+        background-color: $orange;
+    }
+    
+    @mixin agotado {
+        @extend .enstock;
+        background-color: rgb(165, 33, 33);
+    }
+    
+    @mixin card__hover {
+        scale: 1.05;
+        transition: all .5s ease;
+    }
+    
+    @mixin product__mas {
+        width: 100%;
+        text-align: center;
+    }
+    
+    @mixin product__text {
+        color: $darkblue;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    
+    @mixin products__link {
+        text-decoration: none;
+        color: $blue;
+        font-weight: 600;
+    }
+    
+    @mixin productlink__hover {
+        color: $orange;
+        transition: all .2s ease;
+    }
+    
+    // OPINIONES
+    @mixin op__card {
+        width: 100%;
+        margin: 20px 0;
+        background-color: $blue;
+        color: $white;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgb(0, 0, 0, 0.25);
+    }
+    
+    @mixin op__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        padding-top: 25px;
+    }
+    
+    @mixin op__perfil {
+        display: flex;
+        align-items: center;
+    }
+    
+    @mixin op__picture {
+        width: 50px;
+        height: 50px;
+        border: solid 2px $white;
+        border-radius: 50px;
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    @mixin op__stars {
+        display: flex;
+        font-size: 1.2rem;
+        align-items: center;
+        color: $orange;
+    }
+    
+    @mixin op__parrafo {
+        padding: 10px 20px;
+        font-size: .9rem;
+        font-weight: 300;
+        text-align: justify;
+    }

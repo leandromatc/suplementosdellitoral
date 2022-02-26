@@ -1,0 +1,23 @@
+@import "_variables";
+@import "_estructuras";
+
+/* PRODUCTOS */
+
+.productos__main {
+    width: 100%;
+    .productos__titulo {
+        margin-top: $margintop;
+        color: $darkblue;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .productos__section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+}
