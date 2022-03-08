@@ -167,5 +167,25 @@
         .opiniones__cards {
             grid-template-columns: 1fr;
         }
+        .opiniones__comentarios {
+            width: 100%;
+            .opiniones__caja {
+                width: 100%;
+                label {
+                    width: 100%;
+                }
+                input {
+                    width: 100%;
+                }
+                .opiniones__puntuacion {
+                    input {
+                        width: auto;
+                    }
+                }
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
